@@ -1,0 +1,478 @@
+
+% latex slides.tex                          # will create sample.dvi
+% dvips -t a4 slides.dvi                    # will create sample.ps
+% ps2pdf -dPDFSETTINGS=/prepress slides.ps  # will create sample.pdf
+
+% \documentclass[a4paper,italian]{article}
+\documentclass[pdf,mpa]{prosper}
+%\usepackage[toc,highlight,HA]{HA-prosper}
+
+%\usepackage{natbib}
+%\usepackage[numbers]{natbib}
+\usepackage[T1]{fontenc}
+\usepackage[latin1,utf8]{inputenc}
+\usepackage[authoryear]{natbib}
+\usepackage{url}
+\usepackage{enumerate,color,graphicx}
+\usepackage[italian]{babel}
+
+\begin{document}
+
+%\bibliographystyle{plain} % note the change here
+%\bibliographystyle{newapa} % note the change here
+
+% Title Page
+
+\title{Architettura dell'informazione}
+\author{Stefano Bussolon}
+%\address{Università  di Trento, Dipartimento di Scienze della Cognizione e della Formazione, via Matteo del Ben 5, I-38068 Rovereto (TN), Italy}
+
+% \subtitle{On-line Categorization and Card Sorting}
+\email{stefano@bussolon.it}
+%\institution{Universit\`a di Trento, Dipartimento di Scienze della Cognizione e della Formazione, via Matteo del Ben 5, I-38068 Rovereto (TN), Italy}
+
+%%% Things which go on all slides:
+%% the caption. The default is the \title argument.
+\slideCaption{Progetto Index - Sassari 2009}
+
+\maketitle
+
+
+\begin{slide}{Definizioni di AI}
+\begin{quotation}
+Termine utilizzato per descrivere il processo di progettazione, implementazione e valutazione di spazi informativi che siano psicologicamente e sociologicamente accettabili dagli stakeholders. \citep{Dillon2002}\\
+Architettura dell'informazione è un termine usato per descrivere la struttura di un sistema, il modo in cui l'informazione è raggruppata, i metodi di navigazione e la terminologia usata entro il sistema. 
+L'architettura dell'informazione è il processo di costruzione delle modalità di accesso all'informazione finalizzato a permettere agli utenti di navigare velocemente e produttivamente all'interno del sito basandosi solamente sul loro intuito. \citep{McCracken2005}\\
+\end{quotation}
+
+\end{slide}
+
+\begin{slide}{Definizioni (2)}
+\cite{RosenfeldMorville1998}, fornisce quattro definizioni di architettura dell'informazione:
+\begin{itemize}
+\item La combinazione di organizzazione, etichettatura e schemi di navigazione all'interno di un sistema informativo.
+\item La progettazione strutturale di uno spazio informativo, finalizzata a facilitare il completamento di compiti e l'accesso intuitivo ai contenuti.
+% The structural design of an information space to facilitate task completion and intuitive access to content.
+\item L'arte e la scienza di strutturare e classificare siti web ed intranet per aiutare gli utenti a trovare e utilizzare l'informazione.
+% The art and science of structuring and classifying web sites and intranets to help people find and manage information.
+\item Una disciplina emergente, una comunità di pratiche finalizzata a portare i principi della progettazone e dell'architettura nel panorama digitale.
+% An  emerging discipline and  community of practice focused on bringing principles of design and architecture to the digital landscape
+\end{itemize}
+
+\end{slide}
+
+\begin{slide}{La mia definizione}
+\begin{quote}
+L'architettura dell'informazione si occupa di studiare e progettare la struttura e la rappresentazione degli aspetti informativi di un sistema informativo.
+\end{quote} 
+Stefano Bussolon, 2009
+\end{slide}
+
+\begin{slide}{La qualità di un sistema informativo}
+Gli utenti usano internet principalmente per cercare e condividere informazioni, per comunicare, per utilizzare servizi e applicazioni, per acquistare o vendere prodotti e servizi. Il valore di un sistema informativo è legato ad una serie di aspetti
+\begin{itemize}
+\item Utilità;
+\item Usabilità;
+\item Piacevolezza;
+\item Reperibilità (trovabilità);
+\item Accessibilità;
+\item Credibilità;
+\item Valore.
+\end{itemize}
+
+http://semanticstudios.com/publications/semantics/000029.php
+\end{slide}
+
+\begin{slide}{Utilità}
+
+% L'utilità è la capacità dell'artefatto di aiutare l'utente nella realizzazione dei propri scopi. Gli utenti percepiscono un artefatto come utile se lo ritengono adatto a risolvere i propri compiti.
+% 
+% A questo scopo, i siti Web dovrebbero adattare i loro strumenti alle esigenze degli utenti, dotandoli di quelle funzionalità che più si adattano alle strategie prevalenti nella ricerca di informazioni, oltre ad essere attraenti e piacevolmente utilizzabili.
+
+Un sistema informativo deve essere utile; deve contenere informazioni di qualità e fornire servizi utili. L'utilità di un sito web è data dalla sua capacità di fornire le informazioni che gli utenti cercano, oppure di permettere loro di portare a termine i compiti che si sono prefissi.\\
+All'interno di un sistema informativo l'utilità è spesso rappresentabile in termini di rapporto tra i benefici ottenuti e i costi valutati in termini di tempo ed energie impiegate.
+
+\end{slide}
+
+\begin{slide}{Usabilità}
+Secondo lo standard ISO 9241-11 l'usabilità è ``Il livello in cui un prodotto può essere usato da specifici utenti per raggiungere specifici obiettivi con efficacia, efficienza e soddisfazione, in uno specifico contesto d'uso.''
+L'usabilità di un sistema informativo si deve occupare di due aspetti, legati ma distinti:
+\begin{itemize}
+\item l'interfaccia;
+\item l'architettura informativa.
+\end{itemize}
+\end{slide}
+
+\begin{slide}{Piacevolezza}
+A parità di utilità ed usabilità un sistema informativo è migliore se è piacevole da usare \citep{Busetti2003}.
+Nel disegno industriale la bellezza non è considerata come qualcosa di astratto, ma come il risultato logico della strutturazione della forma legata alla funzione dell'artefatto stesso.\\
+
+Una buona progettazione estetica è fondamentalmente una questione logica, ancora prima di essere una questione psicologica, etnografica, sociologica.
+
+% "il designer dà la giusta importanza ad ogni componente dell'oggetto da progettare e sa che anche la forma definitiva dell'oggetto progettato ha un valore psicologico determinante al momento della decisione di acquisto da parte del compratore. Egli ricerca quindi di dare una forma il più possibile coerente alla funzione dell'oggetto, forma che nasce direi quasi spontaneamente, suggerita dalla funzione, dalla parte meccanica (quando c'è), dal materiale più adatto, dalle tecniche di produzione più moderne, da un esame dei costi e da altri fattori di carattere psicologico ed estetico" (Munari, 1966, citato in Bolognani).
+
+
+\end{slide}
+
+\begin{slide}{Reperibilità}
+È importante che le informazioni, i servizi ed i prodotti di un sistema informativo possano essere trovati facilmente dagli utenti. La reperibilità (findability -- trovabilità) è uno dei compiti più importanti dell'architettura dell'informazione.
+
+L'usabilità e gli aspetti di interaction design di un sistema informativo sono spesso indipendenti dalle dimensioni della base di dati. Nei sistemi di grandi dimensioni, però, trovare l'informazione che si cerca può essere un problema, e dunque è centrale garantirne la trovabilità.
+
+\begin{quote}
+Findability is about designing systems that help people find what they need.
+\end{quote}
+Peter Morville
+\end{slide}
+
+\begin{slide}{Accessibilità}
+L'accessibilità implica il rispetto di standard finalizzati all'accesso all'informazione da parte di individui con differenti abilità, strumenti e preferenze, in molteplici contesti d'uso \citep{Lazar2004}.\\
+
+% Accessibility is a general term used to describe the degree to which a product (e.g., device, service, environment) is accessible by as many people as possible. Accessibility can be viewed as the "ability to access" the functionality, and possible benefit, of some system or entity. Accessibility is often used to focus on people with disabilities and their right of access to entities, often through use of assistive technology. Several definitions of accessibility refer directly to access-based individual rights laws and regulations. Products or services designed to meet these regulations are often termed Easy Access or Accessible. http://en.wikipedia.org/wiki/Accessibility
+
+Web accessibility means that people with disabilities can use the Web. More specifically, Web accessibility means that people with disabilities can perceive, understand, navigate, and interact with the Web, and that they can contribute to the Web. Web accessibility also benefits others, including older people with changing abilities due to aging.
+http://www.w3.org/WAI/intro/accessibility.php
+
+
+\end{slide}
+
+\begin{slide}{Credibilità}
+La credibilità è un aspetto molto importante, anche se spesso trascurato, di ogni organizzazione \citep{fogg2001}. Questo vale a maggior ragione per il web, in quanto l'assenza di contatto fisico fra l'organizzazione e l'utente rende quest'ultimo più diffidente.
+
+\end{slide}
+
+\begin{slide}{Valore}
+È importante che il sito offra risorse o servizi di valore per gli utenti e che crei altresì valore anche per il committente \citep{Conci2006}.
+% ------- busetti?
+\end{slide}
+
+\begin{slide}{Ruolo e obiettivi dell'IA}
+\begin{enumerate}
+\item Aumentare l'\textbf{utilità} del sito in quanto alcuni dei suoi metodi empirici permettono di identificare gli interessi, le aspettative e le esigenze degli utenti.
+\item Migliorare l'\textbf{usabilità} in quanto permette di rilevare il lessico degli utenti e di cogliere i loro modelli mentali impliciti concernenti il modo in cui si aspettano che l'informazione sia strutturata e categorizzata.
+\item Migliorare la \textbf{reperibilità} di un sistema informativo. Per essere reperibile l'informazione deve infatti essere strutturata in maniera coerente, in modo da rispettare le aspettative implicite degli utenti.
+\end{enumerate}
+
+\end{slide}
+
+\begin{slide}{Obiettivi}
+Gli obiettivi dell'architettura dell'informazione sono molteplici:
+\begin{itemize}
+\item l'identificazione dei contenuti che gli utenti si aspettano di trovare in un sito web;
+\item la valutazione dell'importanza che gli utenti attribuiscono ai contenuti;
+\item la conoscenza del lessico adottato dagli utenti, ed il conseguente adattamento della terminologia del sito;
+\item la strutturazione delle unità informative (ad esempio: le pagine web) in partizioni gerarchiche (alberi);
+\item l'identificazione delle risorse la cui collocazione può risultare problematica;
+\item la progettazione di metainformazioni sulle risorse.
+\end{itemize}
+http://www.iawiki.net/DefiningTheDamnThing
+\end{slide}
+
+\begin{slide}{Contesto, contenuto, utenti}
+Vi sono tre dimensioni che vanno tenute in considerazione nella progettazione di un sistema informativo \citep{RosenfeldMorville1998}:
+\begin{itemize}
+\item il contesto: gli scopi del committente, le politiche, la cultura, la tecnologia, le risorse, i vincoli;
+\item i contenuti del sistema informativo: i documenti, i file, le applicazioni, i servizi, i metadati;
+\item gli utenti del sistema.
+\end{itemize}
+\end{slide}
+
+\begin{slide}{Lo user centred design}
+Lo standard ISO 13407 definisce lo user centred design come ``Un approccio allo sviluppo di sistemi interattivi focalizzato specificatamente all'usabilità. È una attività multidisciplinare, che richiede competenze e tecniche specifiche di ergonomia \ldots Applicare l'ergonomia al disegno di sistemi richiede di considerare fattori primari le capacità, competenze, conoscenze, limitazioni ed esigenze degli utenti.``\\
+Si assume che nessuno conosca competenze, cultura, bisogni, limiti, atteggiamenti degli utenti reali meglio degli utenti medesimi, e pertanto prevede il coinvolgimento degli utenti in tutte le fasi della progettazione, realizzazione e gestione di un prodotto.
+\end{slide}
+
+\begin{slide}{Design partecipativo}
+La metodologia centrata sull'utente prevede il coinvolgimento attivo degli utenti, la comprensione dei requisiti degli utenti e dei compiti, l'allocazione appropriata di funzioni tra gli utenti e il sistema, un approccio iterativo alla progettazione \citep{Mao2001}.\\
+Il coinvolgimento degli utenti nel design di un sistema informativo può aiutarci a rispondere a tre domande importanti:
+\begin{itemize}
+\item Cosa si aspettano di trovare, gli utenti, nel sito che stiamo costruendo?
+\item Come si aspettano che l'informazione sia strutturata, organizzata, classificata e presentata?
+\item Qual'è il loro lessico? Quali termini dobbiamo usare per aiutarli a comprendere, identificare e recuperare i contenuti?
+\end{itemize}
+\end{slide}
+
+\begin{slide}{Le aree di intervento}
+\cite{RosenfeldMorville1998} identificano tre aree di intervento:
+\begin{enumerate}
+\item \textbf{Organizzazione}: il modo in cui l'informazione deve essere organizzata e strutturata.
+\item \textbf{Labeling}: il lessico da usare per etichettare le risorse e le categorie del sistema di informazione.
+\item \textbf{Navigazione e ricerca}: gli strumenti dell'interfaccia che permettono agli utenti di navigare nel sistema e di cercare le informazioni attraverso il motore di ricerca.
+\end{enumerate}
+\end{slide}
+
+\begin{slide}{Schemi organizzativi}
+-------- definisci schemi organizzativi
+
+In letteratura \citep{RosenfeldMorville1998} vengono distinti gli schemi esatti da quelli ambigui.
+
+\end{slide}
+
+\begin{slide}{Schemi esatti}
+Gli schemi esatti sono quelli che si basano su una classificazione od un ordinamento esatto e non ambiguo. Gli esempi più importanti:
+\begin{itemize}
+\item ordine alfabetico;
+\item ordine cronologico;
+\item classificazione geografica.
+\end{itemize}
+Generalmente l'ordinamento può essere fatto automaticamente dall'applicazione che presenta i dati.
+\end{slide}
+
+\begin{slide}{Schemi ambigui}
+Gli schemi ambigui sono meno semplici da implementare, ed introducono degli elementi di soggettività. Ciononostante risultano spesso estremamente utili. Esempi
+\begin{itemize}
+\item per argomento;
+\item per compito;
+\item per tipologia di audience;
+\item in base a metafore;
+\item schemi ibridi.
+\end{itemize}
+È proprio nella creazione di questa tipologia di schemi che diviene necessario, in fase di design, coinvolgere gli utenti utilizzando degli strumenti di elicitazione della conoscenza.
+\end{slide}
+
+\begin{slide}{Strutture organizzative}
+Le strutture organizzative si occupano della modalità di immagazzinamento e presentazione delle informazioni.\\
+L'adozione di appropriate strutture organizzative è soggetta a tre fattori: il fattore tecnologico, la tipologia dei contenuti, gli aspetti di usabilità legati alla modalità di presentazione dei dati.\\
+
+\cite{RosenfeldMorville1998} identificano tre tipi di strutture: \textbf{gerarchiche}, \textbf{tabellari} ed \textbf{ipertestuali}. A nostro avviso altri due tipi di strutture  meritano la nostra attenzione, poiché sono delle tipologie di organizzazione dell'informazione emergenti in internet: la \textbf{classificazione a faccette} e la \textbf{classificazione a parole chiave (tags)}.
+\end{slide}
+
+\begin{slide}{Strutture gerarchiche}
+Una struttura gerarchica divide il dominio semantico della struttura informativa in partizioni. Un tipico esempio -- di struttura gerarchica esatta -- è la tassonomia linneiana degli esseri viventi.\\
+Su internet vi sono degli esempi estremamente celebri, le directory come dmoz.org o yahoo. In questo caso, però, la struttura gerarchica è di tipo ambiguo.
+\end{slide}
+
+\begin{slide}{Strutture a tabella, o database}
+Esistono numerosi esempi di questa struttura: il client di posta elettronica elenca la posta in arrivo in una tabella, dove ad ogni riga (record) corrisponde una mail, mentre le colonne rappresentano i diversi attributi delle mail: data, mittente, oggetto, dimensione in kilobites.\\
+Un altro esempio è costituito dal servizio offerto da \textit{librarything.com}, un sito permette di condividere la propria libreria, inserendo la lista dei libri che si possiede. Chi entra nella mia \textit{libreria virtuale} (cliccando su \href{http://www.librarything.com/catalog.php?view=sweetdreamerit}{www.librarything.com}) troverà la lista dei miei libri, che potrà essere ordinata per autore, per titolo, per punteggio di gradimento.
+
+\end{slide}
+
+\begin{slide}{Struttura ipertestuale -- \textit{network}}
+La struttura ipertestuale costituisce la più importante caratteristica distintiva del web. Il web è, dal punto di vista dell'utente, una ragnatela di risorse testuali o multimediali fra loro collegati attraverso dei collegamenti ipertestuali.\\
+Un sito web non è un sito web se non ha collegamenti ipertestuali, in quanto questi costituiscono lo strumento universale di navigazione all'interno del web. E dunque anche le strutture gerarchiche e tabellari usano i collegamenti ipertestuali per la navigazione. Vi sono però dei sistemi informativi dove i collegamenti ipertestuali costituiscono e rappresentano la struttura. L'esempio più importante è costituito da wikipedia \footnote{\href{http://it.wikipedia.org}{it.wikipedia.org} nella versione italiana}. Questo tipo di struttura è particolarmente adatto per le conoscenze di tipo enciclopedico.
+\end{slide}
+
+\begin{slide}{Struttura a \textit{faccette}}
+\label{sec:ia_faccette}
+In termini molto sintetici la classificazione a faccette è una classificazione multidimensionale.\\
+Alcuni importanti siti di commercio elettronico fanno uso di questo tipo di classificazione. Se cerchiamo una macchina fotografica digitale su siti come froogle o ebay ci viene offerta la possibilità di restringere la ricerca in base a differenti parametri: tipo di fotocamera (compatta, reflex), risoluzione in megapixels, zoom, marca, fascia di prezzo.\\
+Dal punto di vista dell'interazione con l'utente la classificazione a faccette si propone di combinare la strutturazione della classificazione gerarchica con la multidimensionalità delle strutture a tabella.
+
+\end{slide}
+
+\begin{slide}{Strutture a parole chiave}
+I servizi che si basano su questa struttura permettono agli editori delle informazioni, ma anche agli utenti, di aggiungere delle informazioni alle risorse (documenti, siti web, immagini, video). Queste informazioni, che tecnicamente sono dei metadati, sono generalmente delle parole chiave, tag in inglese. I siti web che si basano su queste strutture permettono agli utenti di navigare all'interno del sito proprio attraverso le parole chiave.\\
+\end{slide}
+
+\begin{slide}{Folksonomies}
+Flickr \footnote{\href{http://www.flickr.com/photos/sweetdreamer_it/}{www.flickr.com}} è un sito che permette di condividere le proprie fotografie. L'utente si registra e carica sul server di flickr le proprie immagini digitali. Il sito invita a contrassegnare ogni immagine con una o più parole chiave. Gli utenti potranno visualizzare le fotografie presenti sul sito attraverso la ricerca per parola chiave.
+del.icio.us \footnote{\href{http://del.icio.us/sweetdreamerit}{del.icio.us}} offre un servizio di bookmark online. Se, navigando, mi imbatto in un sito o una pagina che reputo interessante, posso decidere di salvarne il collegamento fra i segnalibri del mio browser. Del.icio.us permette di fare la stessa cosa salvando l'indirizzo sul loro sito, e contrassegnandolo con dei tag.
+\end{slide}
+
+\begin{slide}{Geotagging}
+Con l'avvento di servizi come Google Maps \footnote{\href{http://maps.google.com}{maps.google.com}} è possibile associare ad una risorsa delle coordinate geografiche. Diviene così possibile navigare le risorse attraverso una mappa satellitare. Flickr offre un servizio di questo genere, che permette di visualizzare il luogo dove sono state scattate le fotografie.
+\end{slide}
+
+\begin{slide}{Information scent}
+Secondo \cite{PirolliCard1999} gli esseri umani sono degli \textit{informavori} il cui successo adattativo dipende dalla loro capacità di applicare con successo delle sofisticate strategie di selezione delle informazioni, di attribuzione di senso, di problem solving e decision making.\\
+Secondo la \textit{Information Foraging theory} da loro proposta la ricerca e la selezione delle informazioni può essere paragonata alla strategia di foraggiamento degli animali, e dunque i sistemi informativi dovrebbero massimizzare il rapporto fra il valore dell'informazione per l'individuo ed il costo sostenuto per trovarla, analizzarla, elaborarla.
+\end{slide}
+
+\begin{slide}{Information scent e web}
+Nel contesto dei siti internet le risorse sono presentate all'utente attraverso dei link testuali o grafici.\\
+Il designer utilizza le etichette come dei suggerimenti prossimali finalizzati a permettere all'utente di intuire i contenuti del documento collegato; nella metafora del foraggiamento informativo questi suggerimenti vengono definiti da \cite{ChiPirolli2000} \textit{information scent}: ciò che il link suggerisce è una percezione soggettiva del valore, del costo e delle modalità di accesso alle informazioni. L'utente è guidato nella sua esplorazione della struttura informativa da questi suggerimenti \citep{ChiPirolli2001}.\\
+\end{slide}
+
+\begin{slide}{Le etichette}
+Con etichetta si intende un'unità informativa di piccole dimensioni, finalizzata ad identificare una risorsa: un documento, un file audio, un prodotto, un filmato, una persona. L'etichetta è generalmente testuale, ma può essere anche una piccola immagine (un'icona) e, in determinati casi, anche un suono (es. una suoneria personalizzata nel cellulare che ci dice chi ci sta chiamando).\\
+Vanno dunque usate delle etichette che sappiano guidare in maniera corretta gli utenti, permettendo loro di intuire la natura dell'informazione a cui sono collegati.
+
+% Nella vita reale le persone tendono a cavarsela piuttosto bene con le etichette, tanto che non si accorgono nemmeno di usarle. A volte però sorgono dei problemi: di carattere etico (basti pensare alle etichette di \textit{persona diversamente abile} o \textit{persona di colore}), culturale o burocratico: non passa giorno che nelle stazioni ferroviarie italiane non venga annunciato un ritardo causato da guasti ai \textit{materiali viaggianti} o ci venga ricordato di convalidare il \textit{documento di viaggio} usando le \textit{macchine obliteratrici}. Citiamo questi esempi non tanto per ironizzare su di un vezzo tipicamente italiano quanto per sottolineare come alcune problematiche relative ad un uso appropriato del lessico non siano circoscritte all'ambito virtuale di internet, ma coinvolgano ogni forma di comunicazione istituzionale.
+\end{slide}
+
+\begin{slide}{Fasi progettuali}
+Nella costruzione di un sistema informativo la progettazione assorbe, generalmente, tempo e risorse, tanto che spesso i clienti -- ma anche alcuni sviluppatori -- sono tentati di saltare intere fasi progettuali. In realtà una buona progettazione permette di creare siti più utili ed usabili; se la progettazione è orientata non solo al presente ma anche agli sviluppi futuri sarà meno soggetta ad obsolescenza e più facile da aggiornare \citep{FuccellaPizzolato1998}. \cite{CaprioGhiglione2003} identificano quattro fasi di progettazione
+\end{slide}
+
+\begin{slide}{Le 4 fasi}
+\begin{enumerate}
+\item \textbf{discovery}: identificazione degli obiettivi del sito, definizione dei requisiti, evidenziazione di eventuali vincoli progettuali; 
+\item \textbf{analisi}: prevalentemente l'inventario dei contenuti e l'analisi dei profili utente;
+\item \textbf{architettura}: labeling, categorizzazione dei contenuti, navigazione, definizione del database;
+\item \textbf{sviluppo}: il sito viene sviluppato e testato.
+\end{enumerate}
+Il processo che presentiamo costituisce un percorso ideale, che integra differenti proposte \citep{FuccellaPizzolato1998, CaprioGhiglione2003, Sinha2004, McGovern2002, McQuaidMcManus2003}.
+\end{slide}
+
+\begin{slide}{Identificazione degli obiettivi}
+Un sito internet deve produrre valore per chi lo commissiona, in modo che vi sia un ritorno degli investimenti.
+Il ritorno degli investimenti di un'azienda può essere definito in termini di differenti variabili \citep{Conci2006}: 
+aumento della produttività dei dipendenti, diminuzione dei costi di formazione, allungamento dei cicli di vita del sito \citep{FuccellaPizzolato1998}, aumento delle vendite (on line e off line), aumento della notorietà del marchio \citep{Zeni2006}, diminuzione dell'uso del call center da parte dei clienti.\\
+Risulta pertanto necessario capire quali sono gli obiettivi dell'azienda committente. Questo passaggio rientra nella fase di stakeholder analysis \citep{Sinha2004}.
+\end{slide}
+
+\begin{slide}{Stakeholder analysis}
+\cite{CaprioGhiglione2003} suggeriscono di adottare il metodo dell'intervista semistrutturata, da sottoporre a tutti gli stakeholder. Nell'intervista vanno chiesti:
+\begin{itemize}
+\item gli obiettivi dell'azienda (l'obiettivo principale, gli obiettivi a breve, medio e lungo termine, in ordine di importanza);
+\item le motivazioni, le aspettative in merito al sito web;
+\item il target di utenza a cui pensano il  sito debba rivolgersi;
+\item i criteri di successo del sito.
+\end{itemize}
+\end{slide}
+
+\begin{slide}{Analisi degli utenti}
+Uno degli svantaggi di una progettazione esclusivamente normativa è che tende ad assumere di conoscere gli utenti e le loro caratteristiche. Questa assunzione si rivela però spesso errata \citep{Nielsen1996}. Conoscere il profilo degli utenti è molto importante nella costruzione di un sistema informativo che intenda soddisfare le loro esigenze. Nell'identificazione di tale profilo è importante trovare un metodo di campionamento dei partecipanti che ne selezioni un gruppo rappresentativo. \cite{FuccellaPizzolato1998} indicano, come possibile fonte, i dati di una analisi di marketing. Questa fonte però non sempre è adeguata. In primo luogo perché non tutte le organizzazioni dispongono di analisi di questo genere. In seconda istanza non è detto che l'utenza del sito internet sia sovrapponibile a quella emersa dall'analisi di marketing.
+
+\end{slide}
+
+\begin{slide}{Campionamento}
+\cite{FuccellaPizzolato1998} distinguono fra \textit{passive e active survey collection}: nella ricerca attiva il designer va a caccia di partecipanti, attraverso una campagna pubblicitaria, o utilizzando una mailing list o un gruppo di discussione. La passive collection consiste nell'utilizzare il sito internet esistente nella raccolta di partecipanti: all'interno del sito viene presentato un invito a partecipare al questionario. Questo è, a nostro avviso, il metodo migliore, in quanto ci assicura il miglior campionamento: i partecipanti che rispondono sono i reali utilizzatori del sito. Come vedremo nelle sezioni successive l'uso di strumenti web per la somministrazione dei questionari quali il free listing, la valutazione di importanza e il card sorting sono motivati anche dalla possibilità di testare, on site (nel senso letterale del termine) i reali utenti del sito.
+\end{slide}
+
+\begin{slide}{Svantaggi}
+Lo svantaggio di questo metodo, però, è che esclude dall'analisi potenziali nuovi utenti; vi è inoltre il rischio che alcune categorie di utenti siano più motivati di altri a rispondere, portando a veri e propri errori di campionamento. Risulterebbe dunque molto utile poter disporre di differenti modalità di reclutamento, e poter distinguere i partecipanti in base alla modalità, al fine di valutare se i risultati che si ottengono sono significativamente diversi. In ogni caso le possibili difficoltà non debbono indurre i progettisti a rinunciare. Poiché la finalità è applicativa (e non scientifica) un campionamento \textit{sbilanciato} è pur sempre meglio di nulla.
+\end{slide}
+
+\begin{slide}{Questionari}
+\cite{FuccellaPizzolato1998} suggeriscono la somministrazione di brevi questionari finalizzati a delineare alcuni profili di base degli utenti:
+\begin{itemize}
+\item profilo anagrafico: sesso, età;
+\item profilo professionale: titolo di studio, professione;
+\item profilo di utilizzo del web: come, quando, perché usa internet;
+\item se l'utente è stato contattato attraverso il sito esistente, possono venir chieste anche delle informazioni sull'uso del sito, su pregi e difetti identificati o desiderata.
+\end{itemize}
+Queste informazioni, comunque, possono essere raccolte anche in fase di somministrazione di questionari più specifici, come il free listing ed il card sorting. % Netsorting, l'applicazione da noi sviluppata, prevede, all'inizio del test, di chiedere proprio le informazioni sopra elencate.\\
+\end{slide}
+
+\begin{slide}{Questionari: limiti}
+I questionari possono fornire delle utili informazioni sugli utenti e sulle loro richieste. Va però tenuto conto che non sempre gli utenti sono in grado di dire cosa vogliono o cosa sia meglio per loro. È pertanto necessario verificare non solo le opinioni ma l'uso reale, ad esempio attraverso l'analisi contestuale.
+\end{slide}
+
+\begin{slide}{Interviste}
+Con alcuni degli utenti è possibile realizzare delle interviste, finalizzate a comprendere i loro comportamenti, bisogni e aspettative \citep{CaprioGhiglione2003}. Dalle interviste e dai questionari è possibile delineare dei profili utente. Alcuni autori suggeriscono di utilizzare i profili più rappresentativi per creare delle \textit{personas}, dei personaggi fittizi e verosimili su cui focalizzarsi nel design del sito web \citep{Sinha2003persona}.\\
+Il vantaggio delle interviste è che permettono di approfondire la conoscenza di alcuni profili di utenti. Lo svantaggio principale è che è costosa, e dunque può essere somministrata ad un numero limitato di persone.
+\end{slide}
+
+\begin{slide}{Indagine contestuale}
+L'indagine contestuale consiste nell'osservare l'utente durante la sua attività e nel luogo in cui si svolge \citep{CaprioGhiglione2003}.
+Questo strumento permette di cogliere le esigenze ed i comportamenti degli utenti. Un approccio di questo genere permette di rendere esplicite conoscenze o esigenze tacite, di cui l'utente non è consapevole ma che di fatto ne condizionano l'interazione con il sistema informativo.
+\end{slide}
+
+\begin{slide}{Indagine contestuale - esempio}
+\cite{McQuaidMcManus2003}, nel ridefinire l'architettura dell'informazione di una biblioteca pubblica, decisero di ``walk a mile in the customers' shoes'':
+\begin{quote}
+% After observing customers and talking with librarians, we had a much more complete picture of the kinds of information available and how people accessed that information. We discovered, for example, that information a customer is seeking might reside in multiple media (books, bulletin boards, magazines, microfiche, newspapers, videotapes, posters, electronic articles, and other people) in different locations (buildings, floors, shelves, computers) with different access and organization methods (Dewey decimal system, Library of Congress, ad hoc special collections). The variety and complexity of these choices demonstrate the pervasiveness of information in a library.
+Dopo aver osservato gli utenti e parlato con i bibliotecari, avevamo un'idea molto più completa del tipo di informazioni disponibili e del modo in cui le persone vi accedono. Abbiamo scoperto, ad esempio, che l'informazione che un utente sta cercando può risiedere in media diversi (libri, bollettini, riviste, microfiche, giornali, videocassette, poster, articoli elettronici, ed altre persone) in luoghi diversi con metodi di accesso ed organizzazione diversi (sistema Dewey, Library of Congress, collezioni speciali). 
+% La varietà e complessità di queste possibilità dimostra la pervasività dell'informazione in una biblioteca.
+\cite{McQuaidMcManus2003}
+\end{quote}
+\end{slide}
+
+\begin{slide}{Analisi del sito esistente}
+
+Se ci si sta occupando del redesign di un sito esistente, il primo passo consiste nell'analisi dei contenuti del vecchio sito. in primo luogo va creata una lista delle risorse presenti \citep{CaprioGhiglione2003}. La lista può essere integrata con altre informazioni legate all'uso del sito \citep{GamberiniValentini2001}:
+\begin{itemize}
+\item il numero medio di contatti giornalieri per ogni pagina, basandosi sul file di log del server;
+\item i referrer alla pagina, ovvero l'elenco di pagine di altri siti web che hanno un link a quella pagina;
+\item la visibilità della pagina sui motori di ricerca, e le parole chiave che indirizzano i motori a quella pagina;
+\item eventuali commenti o voti alla pagina, se il cms lo permette.
+\end{itemize}
+
+\end{slide}
+
+\begin{slide}{Analisi competitiva}
+
+Per identificare il dominio semantico è utile elencare le risorse informative presenti su siti internet concorrenti. Questo metodo è particolarmente utile se si sta costruendo un sito ex novo, ma può dare indicazioni utili anche nel caso di redesign di un sito esistente \citep{Cordioli2006}.\\
+L'analisi competitiva può essere finalizzata non solo a definire il dominio semantico, ma anche ad identificare eventuali pratiche virtuose, standard e consuetudini nel segmento di mercato considerato.
+\end{slide}
+
+\begin{slide}{Analisi competitiva: finalità}
+\cite{CaprioGhiglione2003} sottolineano come da un'analisi competitiva sia possibile cogliere diversi aspetti dei siti concorrenti:
+\begin{itemize}
+\item Caratteristiche generali: impressioni, categoria del sito, profilo del target, stile del sito.
+\item Struttura: aree generali, aree specifiche per profili utenti, organizzazione dei contenuti, navigazione.
+\item Funzionalità: motori di ricerca, help, registrazione, autenticazione.
+\end{itemize}
+In questa fase di processo l'analisi è finalizzata ad ottenere una lista delle risorse presenti sul sito concorrente, in maniera simile alla lista delle risorse esistenti.
+\end{slide}
+
+\begin{slide}{Focus group}
+todo
+% il focus group può risultare estremamente utile nelle circostanze in cui vi sia difficoltà ad utilizzare i metodi elencati precedentemente. Generalmente ciò avviene quando il dominio coperto dal sito internet non è comune. Nel capitolo dedicato alle applicazioni dei nostri metodi descriveremo brevemente la progettazione del portale delle politiche sociali della provincia di Trento; in quel progetto abbiamo integrato le informazioni raccolte dal free listing con quelle di un focus group.
+\end{slide}
+
+\begin{slide}{Free listing}
+\begin{quote}
+% ``There are two main questions in understanding a semantic domain. The first question is `What are the contents of the domain, its scope, and its boundaries?' The second question is `How are the contents structured?' Free-listing is a technique that can help you determine the scope of the domain while providing some insight into how the domain is structured.''
+Nel definire un dominio semantico ci si pone due domande principali. La prima domanda è: ``quali sono i contenuti del dominio?'' La seconda domanda è: ``come sono strutturati i contenuti?''. Il free listing è una tecnica che può aiutarci a determinare l'ampiezza del dominio e fornire alcune intuizioni su come il dominio è strutturato. -- \cite{Sinha2003}
+\end{quote} 
+
+La tecnica del free listing può essere utilizzata per coinvolgere gli utenti nella definizione dei contenuti \citep{Coxon1999}. Più in particolare può essere usata per due funzioni: elencare i contenuti, l'ambito e i confini del dominio semantico; identificare il lessico degli utenti.
+
+\end{slide}
+
+\begin{slide}{Elenco delle risorse}
+Dopo aver utilizzato alcuni o tutti i metodi elencati sarà necessario elencare le voci così ottenute in un'unica lista, badando naturalmente ad eliminare le ripetizioni e le ridondanze.\\
+
+È importante includere in questa lista finale tutte le voci, e non solo quelle corrispondenti a risorse già implementate nel sito web; attraverso la valutazione di importanza sarà possibile identificare le aree informative sulle quali varrà la pena di focalizzarsi.
+\end{slide}
+
+\begin{slide}{Valutazione di importanza}
+
+La valutazione dell'importanza delle risorse consiste in un questionario in cui vengono elencate le risorse identificate nella fase precedente e viene chiesto ai partecipanti di esprimere, attraverso una scala Likert, quanto ritengano importante ognuna delle voci elencate \citep{RuggMcGeorge1997}.\\
+
+Da questo questionario si otterrà una classifica dell'importanza attribuita dagli utenti alle risorse.\\
+Può essere utile analizzare separatamente i risultati del questionario per segmenti di utenti diversi.
+
+\end{slide}
+
+\begin{slide}{Valutazione di importanza: scopi}
+\begin{itemize}
+\item Permettere agli editori del sito di identificare gli argomenti sui quali è importante concentrare l'attenzione nella fase di sviluppo e aggiornamento dei contenuti.
+\item Decidere a quali risorse dare maggiore risalto nel sito internet, magari attraverso dei link nella home page.
+\item Se nella definizione dell'utenza sono emersi gruppi differenti, è possibile che i diversi gruppi attribuiscano un'importanza diversa a risorse differenti; attraverso il questionario è possibile far emergere queste differenze, delle quali è necessario tener conto nella progettazione della navigazione.
+\item Nel card sorting, agli utenti si chiede di classificare una lista di elementi; la prestazione ottimale dei partecipanti si ha quando la lista non supera i 60 - 70 elementi. Se l'elenco di cui disponiamo è più lungo può essere opportuno sottoporre a card sorting solo le 60 voci considerate più importanti dagli utenti. Successivamente è possibile somministrare un secondo card sorting con le voci escluse.
+\end{itemize}
+
+\end{slide}
+
+\begin{slide}{Card sorting}
+Il card sorting \`e la tecnica di elicitazione della conoscenza pi\`u usata e citata nell'area dell'\textit{interazione uomo computer} per far emergere i modelli mentali degli utenti relative alla categorizzazione dei contenuti di un sito web \citep{Nielsen1994,RuggMcGeorge1997,Maurer2004,Nielsen20040719,Fincher2005}.\\ % \todo{ci sono prove che ci riesca?}\\
+Nell'ambito dell'architettura dell'informazione il card sorting costituisce un metodo di design centrato sull'utente, finalizzato ad ottimizzare la reperibilit\`a (\textit{findability}) di un sistema. 
+\end{slide}
+
+\begin{slide}{A cosa serve}
+
+Il card sorting costituisce un metodo efficace per individuare i modelli mentali impliciti degli utenti, rendendo esplicite le loro aspettative di categorizzazione dei contenuti. Conoscere i modelli mentali e le categorizzazioni implicite ci permette di organizzare le informazioni in modo che siano pi\`u facili da trovare e da utilizzare, migliorando la qualit\`a del prodotto.
+
+Attraverso il card sorting è possibile identificare il criterio di classificazione usato dagli utenti ed identificare il contenuto e l'etichetta delle categorie da essi utilizzati. È possibile far emergere eventuali differenze nella categorizzazione fra diversi gruppi di partecipanti.
+\end{slide}
+
+% \begin{slide}{}
+% 
+% \end{slide}
+% 
+% \begin{slide}{}
+% 
+% \end{slide}
+% 
+% \begin{slide}{}
+% 
+% \end{slide}
+
+
+
+
+\bibliographystyle{apalike}
+\bibliography{bibliografia} 
+
+
+\end{document}
+
+
+
+
+
+

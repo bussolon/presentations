@@ -1,0 +1,663 @@
+\documentclass{beamer}
+\let\Tiny=\tiny
+
+\usetheme{Madrid} % My favorite!
+
+\setbeamercovered{invisible}
+% To remove the navigation symbols from 
+% the bottom of slides%
+\setbeamertemplate{navigation symbols}{} 
+%
+%\usepackage{graphicx}
+%\usepackage{bm}         % For typesetting bold math (not \mathbold)
+%\logo{\includegraphics[height=0.6cm]{yourlogo.eps}}
+%
+
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{bibentry}
+%\usepackage{enumerate,color,graphicx}
+\usepackage[authoryear]{natbib}
+\usepackage[italian]{babel}
+
+
+\begin{document}
+\title{Architettura dell'informazione}
+
+%\subtitle{fondamenti teorici dello user experience design}
+\author{Stefano Bussolon}
+
+
+\def\newblock{\hskip .11em plus .33em minus .07em}
+
+% %\address{Università  di Trento, Dipartimento di Scienze della Cognizione e della Formazione, via Matteo del Ben 5, I-38068 Rovereto (TN), Italy}
+% 
+% % 
+% \email{stefano@bussolon.it}
+% \institution{hyperlabs.net}
+% \slideCaption{UXCon: Lugano, dicembre 2009  }
+
+%%% Things which go on all slides:
+%% the caption. The default is the \title argument.
+
+
+% \frame{\frametitle{Two columns}
+%   Here are two columns.
+%   \twocolumn[topsep=0.3cm,lfrprop={linestyle=dotted,linewidth=3pt},
+% lfrheight=4cm,rfrheight=5cm,lineheight=3cm,topsep=0.3cm]{\includegraphics[width=0.90\textwidth]{processo}}{
+% \begin{itemize}
+% 	\item pippo
+% 	\item pluto
+% 	\item paperino
+% \end{itemize}
+% }
+%   Those were two columns.
+% 
+% }
+
+% \frame{\frametitle{}
+% }
+
+\section{Introduzione}
+
+
+\frame{\frametitle{Definizioni di AI}
+\begin{quotation}
+Termine utilizzato per descrivere il processo di progettazione, implementazione e valutazione di \textbf{spazi informativi} che siano psicologicamente e sociologicamente accettabili dagli stakeholders. \cite{Dillon2002}\\
+Definizione  della \textbf{struttura} di un sistema, del modo in cui l'informazione è \textbf{raggruppata}, i metodi di \textbf{navigazione} e la \textbf{terminologia} usata entro il sistema. 
+Il processo di costruzione delle \textbf{modalità di accesso all'informazione} finalizzato a permettere agli utenti di navigare velocemente e produttivamente all'interno del sito basandosi solamente sul loro intuito. \cite{McCracken2005}\\
+\end{quotation}
+
+}
+
+\frame{\frametitle{Definizioni (2)}
+\cite{RosenfeldMorville1998}, fornisce quattro definizioni di architettura dell'informazione:
+\begin{itemize}
+\item La combinazione di organizzazione, etichettatura e schemi di navigazione all'interno di un sistema informativo.
+\item La progettazione strutturale di uno spazio informativo, finalizzata a facilitare il completamento di compiti e l'accesso intuitivo ai contenuti.
+% The structural design of an information space to facilitate task completion and intuitive access to content.
+\item L'arte e la scienza di strutturare e classificare siti web ed intranet per aiutare gli utenti a trovare e utilizzare l'informazione.
+% The art and science of structuring and classifying web sites and intranets to help people find and manage information.
+\item Una disciplina emergente, una comunità di pratiche finalizzata a portare i principi della progettazone e dell'architettura nel panorama digitale.
+% An  emerging discipline and  community of practice focused on bringing principles of design and architecture to the digital landscape
+\end{itemize}
+
+}
+
+% \frame{\frametitle{La mia definizione}
+% \begin{quote}
+% L'architettura dell'informazione si occupa di studiare e progettare la struttura e la rappresentazione degli aspetti informativi di un sistema informativo.
+% \end{quote} 
+% Stefano Bussolon, 2009
+% }
+
+\frame{\frametitle{La qualità di un sistema informativo}
+Il valore di un sistema informativo è legato ad una serie di aspetti
+\begin{itemize}
+\item Utilità;
+\item Usabilità;
+\item Piacevolezza;
+\item Reperibilità (trovabilità);
+\item Accessibilità;
+\item Credibilità;
+\item Valore.
+\end{itemize}
+http://semanticstudios.com/publications/semantics/000029.php
+}
+
+\frame{\frametitle{Utilità}
+
+% L'utilità è la capacità dell'artefatto di aiutare l'utente nella realizzazione dei propri scopi. Gli utenti percepiscono un artefatto come utile se lo ritengono adatto a risolvere i propri compiti.
+% 
+% A questo scopo, i siti Web dovrebbero adattare i loro strumenti alle esigenze degli utenti, dotandoli di quelle funzionalità che più si adattano alle strategie prevalenti nella ricerca di informazioni, oltre ad essere attraenti e piacevolmente utilizzabili.
+
+Un sistema informativo deve essere utile; deve contenere informazioni di qualità e fornire servizi utili. L'utilità di un sito web è data dalla sua capacità di fornire le informazioni che gli utenti cercano, oppure di permettere loro di portare a termine i compiti che si sono prefissi.\\
+All'interno di un sistema informativo l'utilità è spesso rappresentabile in termini di \textbf{rapporto tra i benefici ottenuti e i costi}, valutati in termini di tempo ed energie impiegate.
+
+}
+
+\frame{\frametitle{Usabilità}
+Secondo lo standard ISO 9241-11 l'usabilità è ``Il livello in cui un prodotto può essere usato da specifici utenti per raggiungere specifici obiettivi con efficacia, efficienza e soddisfazione, in uno specifico contesto d'uso.''
+L'usabilità di un sistema informativo si deve occupare di due aspetti, legati ma distinti:
+\begin{itemize}
+\item l'architettura informativa.
+\item l'interazione;
+\end{itemize}
+}
+
+\frame{\frametitle{Piacevolezza}
+A parità di utilità ed usabilità un sistema informativo è migliore se è piacevole da usare \cite{Busetti2003}.
+Nel disegno industriale la bellezza non è considerata come qualcosa di astratto, ma come il risultato logico della strutturazione della forma legata alla funzione dell'artefatto stesso.
+Una buona progettazione estetica è fondamentalmente una questione logica, ancora prima di essere una questione psicologica, etnografica, sociologica.
+% "il designer dà la giusta importanza ad ogni componente dell'oggetto da progettare e sa che anche la forma definitiva dell'oggetto progettato ha un valore psicologico determinante al momento della decisione di acquisto da parte del compratore. Egli ricerca quindi di dare una forma il più possibile coerente alla funzione dell'oggetto, forma che nasce direi quasi spontaneamente, suggerita dalla funzione, dalla parte meccanica (quando c'è), dal materiale più adatto, dalle tecniche di produzione più moderne, da un esame dei costi e da altri fattori di carattere psicologico ed estetico" (Munari, 1966, citato in Bolognani).
+}
+
+\frame{\frametitle{Reperibilità}
+È importante che le informazioni, i servizi ed i prodotti di un sistema informativo possano essere trovati facilmente dagli utenti. La reperibilità (findability -- trovabilità) è uno dei compiti più importanti dell'architettura dell'informazione.
+
+L'usabilità e gli aspetti di interaction design di un sistema informativo sono spesso indipendenti dalle dimensioni della base di dati. Nei sistemi di grandi dimensioni, però, trovare l'informazione che si cerca può essere un problema, e dunque è centrale garantirne la trovabilità.
+
+\begin{quote}
+Findability is about designing systems that help people find what they need.
+\end{quote}
+Peter Morville
+}
+
+\frame{\frametitle{Accessibilità}
+L'accessibilità implica il rispetto di standard finalizzati all'accesso all'informazione da parte di individui con differenti abilità, strumenti e preferenze, in molteplici contesti d'uso \cite{Lazar2004}.\\
+
+% Accessibility is a general term used to describe the degree to which a product (e.g., device, service, environment) is accessible by as many people as possible. Accessibility can be viewed as the "ability to access" the functionality, and possible benefit, of some system or entity. Accessibility is often used to focus on people with disabilities and their right of access to entities, often through use of assistive technology. Several definitions of accessibility refer directly to access-based individual rights laws and regulations. Products or services designed to meet these regulations are often termed Easy Access or Accessible. http://en.wikipedia.org/wiki/Accessibility
+Web accessibility means that people with disabilities can use the Web. More specifically, Web accessibility means that people with disabilities can perceive, understand, navigate, and interact with the Web, and that they can contribute to the Web. Web accessibility also benefits others, including older people with changing abilities due to aging.
+http://www.w3.org/WAI/intro/accessibility.php
+}
+
+\frame{\frametitle{Credibilità}
+La credibilità è un aspetto molto importante, anche se spesso trascurato, di ogni organizzazione \cite{fogg2001}. Questo vale a maggior ragione per il web, in quanto l'assenza di contatto fisico fra l'organizzazione e l'utente rende quest'ultimo più diffidente.
+% esempio: ebay
+}
+
+\frame{\frametitle{Valore}
+È importante che il sito offra risorse o servizi di valore per gli utenti e che crei altresì valore anche per il committente \cite{Conci2006}.
+% ------- busetti?
+}
+
+\section{Ruolo e obiettivi}
+\frame{\frametitle{Ruolo e obiettivi dell'IA}
+\begin{itemize}
+\item Aumentare l'\textbf{utilità} del sito in quanto alcuni dei suoi metodi empirici permettono di identificare gli interessi, le aspettative e le esigenze degli utenti.
+\item Migliorare l'\textbf{usabilità} in quanto permette di rilevare il lessico degli utenti e di cogliere i loro modelli mentali impliciti concernenti il modo in cui si aspettano che l'informazione sia strutturata e categorizzata.
+\item Migliorare la \textbf{reperibilità} di un sistema informativo. Per essere reperibile l'informazione deve infatti essere strutturata in maniera coerente, in modo da rispettare le aspettative implicite degli utenti.
+\end{itemize}
+}
+
+\frame{\frametitle{Obiettivi}
+\begin{itemize}
+\item l'\textbf{identificazione dei contenuti} che gli utenti si aspettano di trovare in un sito web;
+\item la valutazione dell'\textbf{importanza} che gli utenti attribuiscono ai contenuti;
+\item la conoscenza del \textbf{lessico} adottato dagli utenti, ed il conseguente adattamento della terminologia del sito;
+\item la \textbf{strutturazione} delle unità informative in partizioni gerarchiche (alberi);
+\item l'identificazione delle risorse la cui collocazione può risultare problematica;
+\item la progettazione di \textbf{metainformazioni} sulle risorse.
+\end{itemize}
+http://www.iawiki.net/DefiningTheDamnThing
+}
+
+\frame{\frametitle{Contesto, contenuto, utenti}
+Vi sono tre dimensioni che vanno tenute in considerazione nella progettazione di un sistema informativo \cite{RosenfeldMorville1998}:
+\begin{itemize}
+\item il contesto: gli scopi del committente, le politiche, la cultura, la tecnologia, le risorse, i vincoli;
+\item i contenuti del sistema informativo: i documenti, i file, le applicazioni, i servizi, i metadati;
+\item gli utenti del sistema.
+\end{itemize}
+}
+
+\frame{\frametitle{Lo user centred design}
+Lo standard ISO 13407 definisce lo user centred design come ``Un approccio allo sviluppo di sistemi interattivi focalizzato specificatamente all'usabilità. È una attività multidisciplinare, che richiede competenze e tecniche specifiche di ergonomia \ldots Applicare l'ergonomia al disegno di sistemi richiede di considerare fattori primari le capacità, competenze, conoscenze, limitazioni ed esigenze degli utenti.``\\
+Si assume che nessuno conosca competenze, cultura, bisogni, limiti, atteggiamenti degli utenti reali meglio degli utenti medesimi, e pertanto prevede il \textbf{coinvolgimento degli utenti} in tutte le fasi della progettazione, realizzazione e gestione di un prodotto.
+}
+
+\frame{\frametitle{Design partecipativo}
+La metodologia centrata sull'utente prevede il coinvolgimento attivo degli utenti, la comprensione dei requisiti degli utenti e dei compiti, l'allocazione appropriata di funzioni tra gli utenti e il sistema, un approccio iterativo alla progettazione \cite{Mao2001}.\\
+}
+
+\frame{\frametitle{Coinvogliere gli utenti}
+Coinvogliere gli utenti nel design di un sistema informativo ci aiuta a capire:
+\begin{itemize}
+\item Cosa si aspettano di trovare, gli utenti, nel sito che stiamo costruendo?
+\item Come si aspettano che l'informazione sia strutturata, organizzata, classificata e presentata?
+\item Qual'è il loro lessico? Quali termini dobbiamo usare per aiutarli a comprendere, identificare e recuperare i contenuti?
+\end{itemize}
+}
+
+\frame{\frametitle{Le aree di intervento}
+\cite{RosenfeldMorville1998} identificano tre aree di intervento:
+\begin{itemize}
+\item \textbf{Organizzazione}: il modo in cui l'informazione deve essere organizzata e strutturata.
+\item \textbf{Labeling}: il lessico da usare per etichettare le risorse e le categorie del sistema di informazione.
+\item \textbf{Navigazione e ricerca}: gli strumenti dell'interfaccia che permettono agli utenti di navigare nel sistema e di cercare le informazioni attraverso il motore di ricerca.
+\end{itemize}
+}
+
+\section{Schemi e strutture organizzative}
+
+% \frame{\frametitle{Schemi organizzativi}
+% In letteratura \cite{RosenfeldMorville1998} vengono distinti gli schemi esatti da quelli ambigui.
+% }
+
+\frame{\frametitle{Schemi esatti}
+Gli schemi esatti sono quelli che si basano su una classificazione od un ordinamento esatto e non ambiguo. Gli esempi più importanti:
+\begin{itemize}
+\item ordine alfabetico;
+\item ordine cronologico;
+\item classificazione geografica.
+\end{itemize}
+Generalmente l'ordinamento può essere fatto automaticamente dall'applicazione che presenta i dati.
+}
+
+\frame{\frametitle{Schemi ambigui}
+Gli schemi ambigui sono meno semplici da implementare, ed introducono degli elementi di soggettività. Ciononostante risultano spesso estremamente utili. Esempi
+\begin{itemize}
+\item per argomento;
+\item per compito;
+\item per tipologia di audience;
+\item in base a metafore;
+\item schemi ibridi.
+\end{itemize}
+È proprio nella creazione di questa tipologia di schemi che diviene necessario, in fase di design, coinvolgere gli utenti utilizzando degli strumenti di elicitazione della conoscenza.
+}
+
+\frame{\frametitle{Strutture organizzative}
+Le strutture organizzative si occupano della modalità di immagazzinamento e presentazione delle informazioni.\\
+L'adozione di appropriate strutture organizzative è soggetta a tre fattori: il fattore tecnologico, la tipologia dei contenuti, gli aspetti di usabilità legati alla modalità di presentazione dei dati.\\
+
+\cite{RosenfeldMorville1998} identificano tre tipi di strutture: \textbf{gerarchiche}, \textbf{tabellari} ed \textbf{ipertestuali}. A nostro avviso altri due tipi di strutture  meritano la nostra attenzione, poiché sono delle tipologie di organizzazione dell'informazione emergenti in internet: la \textbf{classificazione a faccette} e la \textbf{classificazione a parole chiave (tags)}.
+}
+
+\frame{\frametitle{Strutture gerarchiche}
+Una struttura gerarchica divide il dominio semantico della struttura informativa in partizioni. Un tipico esempio -- di struttura gerarchica esatta -- è la tassonomia linneiana degli esseri viventi.\\
+Su internet vi sono degli esempi estremamente celebri, le directory come dmoz.org o yahoo. In questo caso, però, la struttura gerarchica è di tipo ambiguo.
+}
+
+\frame{\frametitle{Strutture a tabella, o database}
+Esistono numerosi esempi di questa struttura: il client di posta elettronica elenca la posta in arrivo in una tabella, dove ad ogni riga (record) corrisponde una mail, mentre le colonne rappresentano i diversi attributi delle mail: data, mittente, oggetto, dimensione in kilobites.\\
+Un altro esempio è costituito dal servizio offerto da \textit{librarything.com}, un sito permette di condividere la propria libreria, inserendo la lista dei libri che si possiede. Chi entra nella mia \textit{libreria virtuale} (cliccando su \href{http://www.librarything.com/catalog.php?view=sweetdreamerit}{www.librarything.com}) troverà la lista dei miei libri, che potrà essere ordinata per autore, per titolo, per punteggio di gradimento.
+
+}
+
+\frame{\frametitle{Struttura ipertestuale -- \textit{network}}
+La struttura ipertestuale costituisce la più importante caratteristica distintiva del web. Il web è, dal punto di vista dell'utente, una ragnatela di risorse testuali o multimediali fra loro collegati attraverso dei collegamenti ipertestuali.\\
+Un sito web non è un sito web se non ha collegamenti ipertestuali, in quanto questi costituiscono lo strumento universale di navigazione all'interno del web. E dunque anche le strutture gerarchiche e tabellari usano i collegamenti ipertestuali per la navigazione. Vi sono però dei sistemi informativi dove i collegamenti ipertestuali costituiscono e rappresentano la struttura. L'esempio più importante è costituito da wikipedia \footnote{\href{http://it.wikipedia.org}{it.wikipedia.org} nella versione italiana}. Questo tipo di struttura è particolarmente adatto per le conoscenze di tipo enciclopedico.
+}
+
+\frame{\frametitle{Struttura a \textit{faccette}}
+\label{sec:ia_faccette}
+In termini molto sintetici la classificazione a faccette è una classificazione multidimensionale.\\
+Alcuni importanti siti di commercio elettronico fanno uso di questo tipo di classificazione. Se cerchiamo una macchina fotografica digitale su siti come froogle o ebay ci viene offerta la possibilità di restringere la ricerca in base a differenti parametri: tipo di fotocamera (compatta, reflex), risoluzione in megapixels, zoom, marca, fascia di prezzo.\\
+Dal punto di vista dell'interazione con l'utente la classificazione a faccette si propone di combinare la strutturazione della classificazione gerarchica con la multidimensionalità delle strutture a tabella.
+
+}
+
+\frame{\frametitle{Strutture a parole chiave}
+I servizi che si basano su questa struttura permettono agli editori delle informazioni, ma anche agli utenti, di aggiungere delle informazioni alle risorse (documenti, siti web, immagini, video). Queste informazioni, che tecnicamente sono dei metadati, sono generalmente delle parole chiave, tag in inglese. I siti web che si basano su queste strutture permettono agli utenti di navigare all'interno del sito proprio attraverso le parole chiave.\\
+}
+
+\frame{\frametitle{Folksonomies}
+Flickr \footnote{\href{http://www.flickr.com/photos/sweetdreamer_it/}{www.flickr.com}} è un sito che permette di condividere le proprie fotografie. L'utente si registra e carica sul server di flickr le proprie immagini digitali. Il sito invita a contrassegnare ogni immagine con una o più parole chiave. Gli utenti potranno visualizzare le fotografie presenti sul sito attraverso la ricerca per parola chiave.
+del.icio.us \footnote{\href{http://del.icio.us/sweetdreamerit}{del.icio.us}} offre un servizio di bookmark online. Se, navigando, mi imbatto in un sito o una pagina che reputo interessante, posso decidere di salvarne il collegamento fra i segnalibri del mio browser. Del.icio.us permette di fare la stessa cosa salvando l'indirizzo sul loro sito, e contrassegnandolo con dei tag.
+}
+
+\frame{\frametitle{Geotagging}
+Con l'avvento di servizi come Google Maps \footnote{\href{http://maps.google.com}{maps.google.com}} è possibile associare ad una risorsa delle coordinate geografiche. Diviene così possibile navigare le risorse attraverso una mappa satellitare. Flickr offre un servizio di questo genere, che permette di visualizzare il luogo dove sono state scattate le fotografie.
+}
+
+\section{Etichette e information scent}
+\frame{\frametitle{Information scent}
+Secondo \cite{PirolliCard1999} gli esseri umani sono degli \textit{informavori} il cui successo adattativo dipende dalla loro capacità di applicare con successo delle sofisticate strategie di selezione delle informazioni, di attribuzione di senso, di problem solving e decision making.\\
+Secondo la \textit{Information Foraging theory} da loro proposta la ricerca e la selezione delle informazioni può essere paragonata alla strategia di foraggiamento degli animali, e dunque i sistemi informativi dovrebbero massimizzare il rapporto fra il valore dell'informazione per l'individuo ed il costo sostenuto per trovarla, analizzarla, elaborarla.
+}
+
+\frame{\frametitle{Information scent e web}
+Nel contesto dei siti internet le risorse sono presentate all'utente attraverso dei link testuali o grafici.\\
+Il designer utilizza le etichette come dei suggerimenti prossimali finalizzati a permettere all'utente di intuire i contenuti del documento collegato; nella metafora del foraggiamento informativo questi suggerimenti vengono definiti da \cite{ChiPirolli2000} \textit{information scent}: ciò che il link suggerisce è una percezione soggettiva del valore, del costo e delle modalità di accesso alle informazioni. L'utente è guidato nella sua esplorazione della struttura informativa da questi suggerimenti \cite{ChiPirolli2001}.\\
+}
+
+\frame{\frametitle{Le etichette}
+Con etichetta si intende un'unità informativa di piccole dimensioni, finalizzata ad identificare una risorsa: un documento, un file audio, un prodotto, un filmato, una persona. L'etichetta è generalmente testuale, ma può essere anche una piccola immagine (un'icona) e, in determinati casi, anche un suono (es. una suoneria personalizzata nel cellulare che ci dice chi ci sta chiamando).\\
+Vanno dunque usate delle etichette che sappiano guidare in maniera corretta gli utenti, permettendo loro di intuire la natura dell'informazione a cui sono collegati.
+
+% Nella vita reale le persone tendono a cavarsela piuttosto bene con le etichette, tanto che non si accorgono nemmeno di usarle. A volte però sorgono dei problemi: di carattere etico (basti pensare alle etichette di \textit{persona diversamente abile} o \textit{persona di colore}), culturale o burocratico: non passa giorno che nelle stazioni ferroviarie italiane non venga annunciato un ritardo causato da guasti ai \textit{materiali viaggianti} o ci venga ricordato di convalidare il \textit{documento di viaggio} usando le \textit{macchine obliteratrici}. Citiamo questi esempi non tanto per ironizzare su di un vezzo tipicamente italiano quanto per sottolineare come alcune problematiche relative ad un uso appropriato del lessico non siano circoscritte all'ambito virtuale di internet, ma coinvolgano ogni forma di comunicazione istituzionale.
+}
+
+\section{Fasi progettuali}
+\frame{\frametitle{Fasi progettuali}
+Nella costruzione di un sistema informativo la progettazione assorbe, generalmente, tempo e risorse, tanto che spesso i clienti -- ma anche alcuni sviluppatori -- sono tentati di saltare intere fasi progettuali. In realtà una buona progettazione permette di creare siti più utili ed usabili; se la progettazione è orientata non solo al presente ma anche agli sviluppi futuri sarà meno soggetta ad obsolescenza e più facile da aggiornare \cite{FuccellaPizzolato1998}. \cite{CaprioGhiglione2003} identificano quattro fasi di progettazione
+}
+
+\frame{\frametitle{Le 4 fasi}
+\begin{itemize}
+\item \textbf{discovery}: identificazione degli obiettivi del sito, definizione dei requisiti, evidenziazione di eventuali vincoli progettuali; 
+\item \textbf{analisi}: prevalentemente l'inventario dei contenuti e l'analisi dei profili utente;
+\item \textbf{architettura}: labeling, categorizzazione dei contenuti, navigazione, definizione del database;
+\item \textbf{sviluppo}: il sito viene sviluppato e testato.
+\end{itemize}
+Il processo che presentiamo costituisce un percorso ideale, che integra differenti proposte \cite{FuccellaPizzolato1998, CaprioGhiglione2003, Sinha2004, McGovern2002, McQuaidMcManus2003}.
+}
+
+\frame{\frametitle{Identificazione degli obiettivi}
+Un sito internet deve produrre valore per chi lo commissiona, in modo che vi sia un ritorno degli investimenti.
+Il ritorno degli investimenti di un'azienda può essere definito in termini di differenti variabili \cite{Conci2006}: 
+aumento della produttività dei dipendenti, diminuzione dei costi di formazione, allungamento dei cicli di vita del sito \cite{FuccellaPizzolato1998}, aumento delle vendite (on line e off line), aumento della notorietà del marchio \cite{Zeni2006}, diminuzione dell'uso del call center da parte dei clienti.\\
+Risulta pertanto necessario capire quali sono gli obiettivi dell'azienda committente. Questo passaggio rientra nella fase di stakeholder analysis \cite{Sinha2004}.
+}
+
+\frame{\frametitle{Stakeholder analysis}
+\cite{CaprioGhiglione2003} suggeriscono di adottare il metodo dell'intervista semistrutturata, da sottoporre a tutti gli stakeholder. Nell'intervista vanno chiesti:
+\begin{itemize}
+\item gli obiettivi dell'azienda (l'obiettivo principale, gli obiettivi a breve, medio e lungo termine, in ordine di importanza);
+\item le motivazioni, le aspettative in merito al sito web;
+\item il target di utenza a cui pensano il  sito debba rivolgersi;
+\item i criteri di successo del sito.
+\end{itemize}
+}
+
+\frame{\frametitle{Analisi degli utenti}
+Uno degli svantaggi di una progettazione esclusivamente normativa è che tende ad assumere di conoscere gli utenti e le loro caratteristiche. Questa assunzione si rivela però spesso errata \cite{Nielsen1996}. Conoscere il profilo degli utenti è molto importante nella costruzione di un sistema informativo che intenda soddisfare le loro esigenze. Nell'identificazione di tale profilo è importante trovare un metodo di campionamento dei partecipanti che ne selezioni un gruppo rappresentativo. \cite{FuccellaPizzolato1998} indicano, come possibile fonte, i dati di una analisi di marketing. Questa fonte però non sempre è adeguata. In primo luogo perché non tutte le organizzazioni dispongono di analisi di questo genere. In seconda istanza non è detto che l'utenza del sito internet sia sovrapponibile a quella emersa dall'analisi di marketing.
+
+}
+
+\frame{\frametitle{Campionamento}
+\cite{FuccellaPizzolato1998} distinguono fra \textit{passive e active survey collection}: nella ricerca attiva il designer va a caccia di partecipanti, attraverso una campagna pubblicitaria, o utilizzando una mailing list o un gruppo di discussione. La passive collection consiste nell'utilizzare il sito internet esistente nella raccolta di partecipanti: all'interno del sito viene presentato un invito a partecipare al questionario. Questo è, a nostro avviso, il metodo migliore, in quanto ci assicura il miglior campionamento: i partecipanti che rispondono sono i reali utilizzatori del sito. Come vedremo nelle sezioni successive l'uso di strumenti web per la somministrazione dei questionari quali il free listing, la valutazione di importanza e il card sorting sono motivati anche dalla possibilità di testare, on site (nel senso letterale del termine) i reali utenti del sito.
+}
+
+\frame{\frametitle{Svantaggi}
+Lo svantaggio di questo metodo, però, è che esclude dall'analisi potenziali nuovi utenti; vi è inoltre il rischio che alcune categorie di utenti siano più motivati di altri a rispondere, portando a veri e propri errori di campionamento. Risulterebbe dunque molto utile poter disporre di differenti modalità di reclutamento, e poter distinguere i partecipanti in base alla modalità, al fine di valutare se i risultati che si ottengono sono significativamente diversi. In ogni caso le possibili difficoltà non debbono indurre i progettisti a rinunciare. Poiché la finalità è applicativa (e non scientifica) un campionamento \textit{sbilanciato} è pur sempre meglio di nulla.
+}
+
+\frame{\frametitle{Questionari}
+\cite{FuccellaPizzolato1998} suggeriscono la somministrazione di brevi questionari finalizzati a delineare alcuni profili di base degli utenti:
+\begin{itemize}
+\item profilo anagrafico: sesso, età;
+\item profilo professionale: titolo di studio, professione;
+\item profilo di utilizzo del web: come, quando, perché usa internet;
+\item se l'utente è stato contattato attraverso il sito esistente, possono venir chieste anche delle informazioni sull'uso del sito, su pregi e difetti identificati o desiderata.
+\end{itemize}
+Queste informazioni, comunque, possono essere raccolte anche in fase di somministrazione di questionari più specifici, come il free listing ed il card sorting. % Netsorting, l'applicazione da noi sviluppata, prevede, all'inizio del test, di chiedere proprio le informazioni sopra elencate.\\
+}
+
+\frame{\frametitle{Questionari: limiti}
+I questionari possono fornire delle utili informazioni sugli utenti e sulle loro richieste. Va però tenuto conto che non sempre gli utenti sono in grado di dire cosa vogliono o cosa sia meglio per loro. È pertanto necessario verificare non solo le opinioni ma l'uso reale, ad esempio attraverso l'analisi contestuale.
+}
+
+\frame{\frametitle{Interviste}
+Con alcuni degli utenti è possibile realizzare delle interviste, finalizzate a comprendere i loro comportamenti, bisogni e aspettative \cite{CaprioGhiglione2003}. Dalle interviste e dai questionari è possibile delineare dei profili utente. Alcuni autori suggeriscono di utilizzare i profili più rappresentativi per creare delle \textit{personas}, dei personaggi fittizi e verosimili su cui focalizzarsi nel design del sito web \cite{Sinha2003persona}.\\
+Il vantaggio delle interviste è che permettono di approfondire la conoscenza di alcuni profili di utenti. Lo svantaggio principale è che è costosa, e dunque può essere somministrata ad un numero limitato di persone.
+}
+
+\frame{\frametitle{Indagine contestuale}
+L'indagine contestuale consiste nell'osservare l'utente durante la sua attività e nel luogo in cui si svolge \cite{CaprioGhiglione2003}.
+Questo strumento permette di cogliere le esigenze ed i comportamenti degli utenti. Un approccio di questo genere permette di rendere esplicite conoscenze o esigenze tacite, di cui l'utente non è consapevole ma che di fatto ne condizionano l'interazione con il sistema informativo.
+}
+
+\frame{\frametitle{Indagine contestuale - esempio}
+\cite{McQuaidMcManus2003}, nel ridefinire l'architettura dell'informazione di una biblioteca pubblica, decisero di ``walk a mile in the customers' shoes'':
+\begin{quote}
+% After observing customers and talking with librarians, we had a much more complete picture of the kinds of information available and how people accessed that information. We discovered, for example, that information a customer is seeking might reside in multiple media (books, bulletin boards, magazines, microfiche, newspapers, videotapes, posters, electronic articles, and other people) in different locations (buildings, floors, shelves, computers) with different access and organization methods (Dewey decimal system, Library of Congress, ad hoc special collections). The variety and complexity of these choices demonstrate the pervasiveness of information in a library.
+Dopo aver osservato gli utenti e parlato con i bibliotecari, avevamo un'idea molto più completa del tipo di informazioni disponibili e del modo in cui le persone vi accedono. Abbiamo scoperto, ad esempio, che l'informazione che un utente sta cercando può risiedere in media diversi (libri, bollettini, riviste, microfiche, giornali, videocassette, poster, articoli elettronici, ed altre persone) in luoghi diversi con metodi di accesso ed organizzazione diversi (sistema Dewey, Library of Congress, collezioni speciali). 
+% La varietà e complessità di queste possibilità dimostra la pervasività dell'informazione in una biblioteca.
+\cite{McQuaidMcManus2003}
+\end{quote}
+}
+
+\frame{\frametitle{Analisi del sito esistente}
+
+Se ci si sta occupando del redesign di un sito esistente, il primo passo consiste nell'analisi dei contenuti del vecchio sito. in primo luogo va creata una lista delle risorse presenti \cite{CaprioGhiglione2003}. La lista può essere integrata con altre informazioni legate all'uso del sito \cite{GamberiniValentini2001}:
+\begin{itemize}
+\item il numero medio di contatti giornalieri per ogni pagina, basandosi sul file di log del server;
+\item i referrer alla pagina, ovvero l'elenco di pagine di altri siti web che hanno un link a quella pagina;
+\item la visibilità della pagina sui motori di ricerca, e le parole chiave che indirizzano i motori a quella pagina;
+\item eventuali commenti o voti alla pagina, se il cms lo permette.
+\end{itemize}
+
+}
+
+\frame{\frametitle{Analisi competitiva}
+
+Per identificare il dominio semantico è utile elencare le risorse informative presenti su siti internet concorrenti. Questo metodo è particolarmente utile se si sta costruendo un sito ex novo, ma può dare indicazioni utili anche nel caso di redesign di un sito esistente \cite{Cordioli2006}.\\
+L'analisi competitiva può essere finalizzata non solo a definire il dominio semantico, ma anche ad identificare eventuali pratiche virtuose, standard e consuetudini nel segmento di mercato considerato.
+}
+
+\frame{\frametitle{Analisi competitiva: finalità}
+\cite{CaprioGhiglione2003} sottolineano come da un'analisi competitiva sia possibile cogliere diversi aspetti dei siti concorrenti:
+\begin{itemize}
+\item Caratteristiche generali: impressioni, categoria del sito, profilo del target, stile del sito.
+\item Struttura: aree generali, aree specifiche per profili utenti, organizzazione dei contenuti, navigazione.
+\item Funzionalità: motori di ricerca, help, registrazione, autenticazione.
+\end{itemize}
+In questa fase di processo l'analisi è finalizzata ad ottenere una lista delle risorse presenti sul sito concorrente, in maniera simile alla lista delle risorse esistenti.
+}
+
+% \frame{\frametitle{Focus group}
+% todo
+% % il focus group può risultare estremamente utile nelle circostanze in cui vi sia difficoltà ad utilizzare i metodi elencati precedentemente. Generalmente ciò avviene quando il dominio coperto dal sito internet non è comune. Nel capitolo dedicato alle applicazioni dei nostri metodi descriveremo brevemente la progettazione del portale delle politiche sociali della provincia di Trento; in quel progetto abbiamo integrato le informazioni raccolte dal free listing con quelle di un focus group.
+% }
+
+\frame{\frametitle{Free listing}
+\begin{quote}
+% ``There are two main questions in understanding a semantic domain. The first question is `What are the contents of the domain, its scope, and its boundaries?' The second question is `How are the contents structured?' Free-listing is a technique that can help you determine the scope of the domain while providing some insight into how the domain is structured.''
+Nel definire un dominio semantico ci si pone due domande principali. La prima domanda è: ``quali sono i contenuti del dominio?'' La seconda domanda è: ``come sono strutturati i contenuti?''. Il free listing è una tecnica che può aiutarci a determinare l'ampiezza del dominio e fornire alcune intuizioni su come il dominio è strutturato. -- \cite{Sinha2003}
+\end{quote} 
+
+La tecnica del free listing può essere utilizzata per coinvolgere gli utenti nella definizione dei contenuti \cite{Coxon1999}. Più in particolare può essere usata per due funzioni: elencare i contenuti, l'ambito e i confini del dominio semantico; identificare il lessico degli utenti.
+
+}
+
+\frame{\frametitle{Elenco delle risorse}
+Dopo aver utilizzato alcuni o tutti i metodi elencati sarà necessario elencare le voci così ottenute in un'unica lista, badando naturalmente ad eliminare le ripetizioni e le ridondanze.\\
+
+È importante includere in questa lista finale tutte le voci, e non solo quelle corrispondenti a risorse già implementate nel sito web; attraverso la valutazione di importanza sarà possibile identificare le aree informative sulle quali varrà la pena di focalizzarsi.
+}
+
+\frame{\frametitle{Valutazione di importanza}
+
+La valutazione dell'importanza delle risorse consiste in un questionario in cui vengono elencate le risorse identificate nella fase precedente e viene chiesto ai partecipanti di esprimere, attraverso una scala Likert, quanto ritengano importante ognuna delle voci elencate \cite{RuggMcGeorge1997}.\\
+
+Da questo questionario si otterrà una classifica dell'importanza attribuita dagli utenti alle risorse.\\
+Può essere utile analizzare separatamente i risultati del questionario per segmenti di utenti diversi.
+
+}
+
+\frame{\frametitle{Valutazione di importanza: scopi}
+\begin{itemize}
+\item Permettere agli editori del sito di identificare gli argomenti sui quali è importante concentrare l'attenzione nella fase di sviluppo e aggiornamento dei contenuti.
+\item Decidere a quali risorse dare maggiore risalto nel sito internet, magari attraverso dei link nella home page.
+\item Se nella definizione dell'utenza sono emersi gruppi differenti, è possibile che i diversi gruppi attribuiscano un'importanza diversa a risorse differenti; attraverso il questionario è possibile far emergere queste differenze, delle quali è necessario tener conto nella progettazione della navigazione.
+\item Nel card sorting, agli utenti si chiede di classificare una lista di elementi; la prestazione ottimale dei partecipanti si ha quando la lista non supera i 60 - 70 elementi. Se l'elenco di cui disponiamo è più lungo può essere opportuno sottoporre a card sorting solo le 60 voci considerate più importanti dagli utenti. Successivamente è possibile somministrare un secondo card sorting con le voci escluse.
+\end{itemize}
+
+}
+
+\section{Card sorting}
+\frame{\frametitle{Card sorting}
+Il card sorting \`e la tecnica di elicitazione della conoscenza pi\`u usata e citata nell'area dell'\textit{interazione uomo computer} per far emergere i modelli mentali degli utenti relative alla categorizzazione dei contenuti di un sito web \cite{NielsenSano_1994,RuggMcGeorge1997,Maurer2004,Nielsen20040719,Fincher2005}.\\ % \todo{ci sono prove che ci riesca?}\\
+Nell'ambito dell'architettura dell'informazione il card sorting costituisce un metodo di design centrato sull'utente, finalizzato ad ottimizzare la reperibilit\`a (\textit{findability}) di un sistema. 
+}
+
+\frame{\frametitle{A cosa serve}
+Il card sorting costituisce un metodo efficace per individuare i modelli mentali impliciti degli utenti, rendendo esplicite le loro aspettative di categorizzazione dei contenuti. Conoscere i modelli mentali e le categorizzazioni implicite ci permette di organizzare le informazioni in modo che siano pi\`u facili da trovare e da utilizzare, migliorando la qualit\`a del prodotto.
+
+Attraverso il card sorting è possibile identificare il criterio di classificazione usato dagli utenti ed identificare il contenuto e l'etichetta delle categorie da essi utilizzati. È possibile far emergere eventuali differenze nella categorizzazione fra diversi gruppi di partecipanti.
+}
+
+\frame{\frametitle{Uso}
+Il card sorting è usato da decenni nelle scienze sociali come strumento per classificare oggetti in categorie. È la tecnica di elicitazione della conoscenza più usata nell’area dell’interazione uomo-computer per far emergere i modelli mentali degli utenti, rendendo esplicite le loro aspettative di categorizzazione dei contenuti \cite{NielsenSano_1994, RuggMcGeorge1997, Maurer2004,Fincher2005}; costituisce un metodo di design centrato sull’utente, finalizzato ad ottimizzare la reperibilità (findability) all'interno un sistema. Se i partecipanti sono rappresentativi degli utenti del sito i risultati dell’analisi tenderanno a riflettere la struttura in cui gli utenti si aspettano che le informazioni siano presentate. È dunque un buon punto di partenza per organizzare la struttura del sito web.
+}
+
+\frame{\frametitle{}
+Secondo \cite{RuggMcGeorge1997} il card sorting può essere usato sia come tecnica esplorativa che come tecnica di classificazione vera e propria. Secondo questi autori il card sorting può essere applicato ad una gamma di entità estremamente ampia, che spazia da elenchi di oggetti concreti a concetti astratti, e può essere utilizzata ricorsivamente a vari livelli di una struttura informativa. Attraverso il card sorting possiamo far emergere: 
+\begin{itemize}
+\item i criteri che i partecipanti adottano per categorizzare e cercare le informazioni
+\item la struttura informativa che implicitamente si aspettano di trovare
+\item le eventuali differenze fra diversi gruppi di utenti
+\item le etichette delle categorie, espresse nel lessico degli utenti. 
+\end{itemize}
+
+}
+
+\frame{\frametitle{Circostanze ideali}
+È una tecnica facile da realizzare e facile da far comprendere ai partecipanti: gli utenti la considerano un metodo di classificazione naturale.\\
+Le circostanze ideali per ottenere dei buoni risultati sono: 
+\begin{itemize}
+\item l'elenco non è superiore a 60-70 elementi
+\item i contenuti sono fra loro omogenei
+\item i partecipanti conoscono e comprendono i contenuti. 
+\end{itemize}
+
+
+}
+
+\frame{\frametitle{Card sorting aperto e chiuso}
+Il card sorting può essere somministrato in due modalità: 
+\begin{itemize}
+\item card sorting aperto 
+\item card sorting chiuso.
+\end{itemize}
+Nel card sorting chiuso all’utente viene chiesto di categorizzare gli items in categorie stabilite dallo sperimentatore. Il card sorting aperto è meno strutturato in quanto è l’utente che decide il nome delle categorie, e dunque permette di far emergere i criteri di categorizzazione impliciti degli utenti. I risultati del card sorting aperto sono particolarmente interessanti poiché possono darci informazioni su delle tipologie di categorizzazione non immaginate a priori dallo sperimentatore, anche se la maggiore libertà concessa all’utente rende meno coerenti i risultati raccolti.
+}
+
+\frame{\frametitle{Analisi delle componenti principali}
+L'analisi delle componenti principali (PCA) è una tecnica statistica esplorativa multivariata finalizzata a semplificare insiemi di dati complessi \cite{Anderson1988,Raychaudhuri2000,Ding2004}. Date m osservazioni su n variabili, lo scopo della PCA è di ridurre la dimensionalità della matrice di dati trovando r nuove variabili, dove $r < n$. Queste r variabili, definite componenti principali, hanno la proprietà di \textit{spiegare} la varianza delle n variabili originali e di essere fra loro ortogonali e non correlate. Ogni componente principale è una combinazione lineare delle variabili originarie, ed analizzando i coefficenti è possibile attribuire un significato alle componenti \cite{Raychaudhuri2000}. Nelle nostre analisi (sulle matrici di prossimità) i risultati ottenuti con lo scaling multidimensionale classico (metrico) e la PCA sono del tutto equivalenti.
+}
+
+\frame{\frametitle{Cluster analysis}
+La clusterizzazione è una divisione di un insieme in gruppi di oggetti fra loro simili. Ogni gruppo, definito cluster, consiste di oggetti che sono simili fra di loro e dissimili dagli oggetti degli altri gruppi \cite {Berkhin}. La cluster analysis è un sistema di classificazione esplorativo senza supervisione \cite{Xu2005} che costruisce una partizione, ovvero un insieme di gruppi fra loro disgiunti \cite{Ding2004}.\\
+Vi sono innumerevoli algoritmi di classificazione; i più comuni si distinguono in metodi gerarchici e metodi di partizionamento \cite {Berkhin}. La cluster analysis gerarchica è un metodo gerarchico agglomerativo, mentre la k-means è un algoritmo di partizionamento.
+}
+
+\frame{\frametitle{Cluster analysis gerarchica}
+La cluster analysis gerarchica costruisce un albero di clusters, detto dendrogramma o albero di classificazione gerarchica \cite{Coxon1999,Sinha2004}; questo è l'algoritmo di clusterizzazione più frequentemente applicato alle matrici di prossimità e dunque al card sorting \cite{Tullis2004,FaiksHyland,Berkhin}.
+}
+
+\frame{\frametitle{K-means}
+ K-means è un algoritmo di partizionamento che assegna l'insieme di oggetti in K clusters \cite{Xu2005,Berkhin}; vantaggi: 
+\begin{itemize}
+\item permette di applicare ai dati del card sorting non solo l'algoritmo di clusterizzazione gerarchica, ma anche un algoritmo di partizionamento;
+\item permette di visualizzare i risultati in uno spazio bidimensionale (grazie alla PCA);
+\item permette di far emergere delle dimensioni semanticamente interpretabili; poiché il clustering si basa su tali dimensioni, è possibile interpretare la classificazione in base a tali variabili \textit{latenti} \cite{Raychaudhuri2000}.
+\end{itemize}
+}
+
+
+\section {Lo scheletro}
+
+\frame{\frametitle{Cosa definire}
+In The elements of user experience, lo skeleton è il 4' livello. A questo livello, secondo Cooper, vanno definiti:
+\begin{itemize}
+ \item la piattaforma (web, mobile ...)
+ \item gli elementi funzionali e i dati da rappresentare
+ \item il raggruppamento e le gerarchie
+ \item il layout visivo.
+\end{itemize}
+Come vedremo nella lezione dedicata all'usabilità, è necessario rispettare euristiche e linee guida, ed è opportuno testare frequentemente questi passaggi.
+}
+
+\frame{\frametitle{Elementi informativi e funzionali}
+Riprendendo la slide dell'introduzione, JJG definisce 3 componenti:
+\begin{itemize}
+\item l'\textbf{information design}: la presentazione delle informazioni all'utente;
+\item l'\textbf{interface design}: la progettazione degli elementi dell'interfaccia per permettere agli utenti di interagire con l'applicazione;
+\item la progettazione della \textbf{navigazione}, che permette agli utenti di muoversi all'interno della struttura informativa.
+\end{itemize}
+Uso di convenzioni, metafore, pattern, linee guida. Vengono prodotti wireframes.
+}
+
+\frame{\frametitle{Dalla macrostruttura (sito) alla microstruttura (pagina)}
+Gli strumenti adottati fino a questo punto sono finalizzati a definire la struttura del sito.\\
+A questo punto si ragiona sulle pagine. Vanno definiti:
+\begin{itemize}
+ \item le varie tipolige di pagine (home, indice di sezione, pagina documento, pagina prodotto ...)
+ \item per ogni tipologia, un template (wireframe) in cui disporre gli elementi informativi e funzionali.
+\end{itemize}
+}
+
+\frame{\frametitle{Database, microformati}
+Dal punto di vista implementativo (back-end) gli sviluppatori devono definire la struttura del database che gestirà le informazioni.\\
+Ad esempio, per un sito che vende libri, dovremo immaginare (almeno) 2 tabelle:
+\begin{itemize}
+  \item la tabella \textbf{autori} (nome, cognome, data di nascita, nazionalità, biografia);
+  \item la tabella \textbf{libri} (idAutore, titolo, anno di pubblicazione, casa editrice ...).
+\end{itemize}
+Sul lato dell'interfaccia, dobbiamo creare lo scheletro per la pagina autore e quello per la pagina libro, decidendo quali informazioni presentare, e come.
+}
+
+\frame{\frametitle{Gli elementi della pagina}
+Vanno definiti:
+\begin{itemize}
+ \item l'importanza relativa degli elementi, e la loro gerarchia;
+ \item la disposizione nello spazio, tenendo conto di:
+  \begin{itemize}
+    \item gerarchia e importanza;
+    \item eventuali sequenze logiche;
+    \item raggruppamenti funzionali e informativi
+  \end{itemize}
+
+\end{itemize}
+}
+
+\frame{\frametitle{Wireframes}
+I wireframes sono finalizzati a creare dei prototipi delle pagine, basati sui criteri sopra esposti.\\
+Per creare wireframes possiamo usare strumenti diversi:
+\begin{itemize}
+ \item carta e penna
+ \item software dedicati
+ \item powerpoint, inkscape
+ \item direttamente in html
+\end{itemize}
+È buona norma iniziare con carta e penna, in modo da produrre molte idee in poco tempo e con poco sforzo.
+Wireframes troppo dettagliati sono controproducenti, perché si rischia di affezionarsi ad una ipotesi ancora embrionale.
+}
+
+\frame{\frametitle{Risorse utili}
+\begin{itemize}
+ \item \href {http://developer.yahoo.com/ypatterns/}{Yahoo design patterns}
+ \item \href {http://www.welie.com/patterns/}{Welie patterns}
+ \item \href {http://patternry.com/patterns/}{Patternry}
+ \item \href {http://ui-patterns.com/}{ui-patterns}
+ \item \href {http://www.time-tripper.com/uipatterns/}{time-tripper}
+% \item \href {http://blog.html.it/layoutgala/}{Html.it layout gala}
+% \item \href {}{}
+\end{itemize}
+
+
+}
+
+\frame{\frametitle{Esercizio: identificare il layout di questi siti}
+yahoo.com, google.com, youtube.com, live.com, msn.com, myspace.com, wikipedia.org, facebook.com, blogger.com, orkut.com, microsoft.com, ebay.it, aol.com, amazon.com, The Internet Movie Database (imdb.com), wordpress.com, flickr.com, bbc.co.uk, 
+craigslist.org, cnn.com
+}
+
+\section{La navigazione}
+\frame{\frametitle{Finalità della navigazione}
+\begin{itemize}
+ \item permettere all'utente di capire dov'è
+ \item permettere all'utente di muoversi all'interno del sito
+ \item permettergli di capire il contesto e le modalità di organizzazione delle informazione
+ \item dare un'idea di quali informazioni può trovare (information scent)
+\end{itemize}
+}
+
+\frame{\frametitle{Sistemi di navigazione}
+\begin{itemize}
+ \item navigazione \textbf{globale}: fornisce l'accesso ai nodi principali dell'intero sito. Generalmente è presente in ogni pagina
+ \item navigazione \textbf{locale}: fornisce l'accesso alle voci appartenenti alla stessa categoria della pagina
+ \item navigazione \textbf{contestuale}: accesso a voci semanticamente correlate
+ \item navigazione \textbf{supplementare}: accesso ad altre voci, importanti o obbligatorie (legalese)
+ \item navigazione \textbf{di cortesia}: link a pagina indice, mappa del sito ...
+ \item \textbf{briciole di pane}: $ home > categoria 1 > categoria 1.A > pagina $
+\end{itemize}
+
+}
+
+\frame{\frametitle{Esercizio: identificare i sistemi di navigazione}
+Identificare la navigazione globale, locale, contestuale, supplementare, di cortesia, briciole di pane.\\
+yahoo.com, google.com, youtube.com, live.com, msn.com, myspace.com, wikipedia.org, facebook.com, blogger.com, orkut.com, microsoft.com, ebay.it, aol.com, amazon.com, The Internet Movie Database (imdb.com), wordpress.com, flickr.com, bbc.co.uk, 
+craigslist.org, cnn.com
+}
+
+\frame{\frametitle{Grazie}
+
+stefano@bussolon.it\\
+http://www.bussolon.it\\
+% http://www.linkedin.com/in/bussolon\\
+% http://www.facebook.com/stefano.bussolon\\
+
+}
+
+\frame{\frametitle[allowframebreaks]{Bibliografia}
+\bibliographystyle{apalike}
+\bibliography{bibliografia} 
+
+}
+
+
+\end{document}
